@@ -19,7 +19,7 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-lerobot = { path = "../lerobot-dev" }
+lerobot = { url = "https://github.com/pham-tuan-binh/lerobot-dev" }
 
 # Add this to force the override
 [tool.uv]

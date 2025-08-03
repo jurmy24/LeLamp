@@ -163,6 +163,32 @@ def set_joints(joint_values, mode=ControlMode.RADIANS):
     else:
         raise ValueError(f"Invalid control mode: {mode}")
 
+def draw_transformation_matrix(matrix, name="transformation"):
+    # Check shape
+    if matrix.shape != (4, 4):
+        raise ValueError("Transformation matrix must be 4x4")
+
+    rotation_matrix = matrix[:3, :3]
+    translation_vector = matrix[:3, 3]
+
+    # 4.
+    # Visualize the rotation and translation in Rerun
+    x_vector = np.array([1, 0, 0])
+    y_vector = np.array([0, 1, 0])
+    z_vector = np.array([0, 0, 1])
+
+    # Transform the vectors using the rotation matrix
+    x_transformed = rotation_matrix @ x_vector
+    y_transformed = rotation_matrix @ y_vector
+    z_transformed = rotation_matrix @ z_vector
+
+    x_color = [255, 0, 0]  # Red
+    y_color = [0, 255, 0]  # Green
+    z_color = [0, 0, 255]
+
+    # Log the arrows
+    rr.log(f"transformation/{name}", rr.Arrows3D(vectors=[x_transformed, y_transformed, z_transformed], origins=[translation_vector, translation_vector, translation_vector], colors=[x_color, y_color, z_color]))
+
 def animate_joints(duration=10.0, fps=30):
     """Animate all joints simultaneously with smooth motion"""
     print(f"Starting simultaneous joint animation for {duration} seconds...")

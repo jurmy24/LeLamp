@@ -1,80 +1,122 @@
-import pygame
+"""Hand Tracker App
+
+This app tracks your hand using a camera.
+
+It uses OpenCV camera to detect the hand position.
+It uses mediapipe to track the hand and OpenCV for image processing.
+"""
+
+import threading
+
+import cv2
 import numpy as np
-import pinocchio as pin
-import rerun as rr
 from scipy.spatial.transform import Rotation as R
-from inverse_kinematics.inverse import get_action, q_sample, T, ik, set_joints_radians
-from controller.xbox import update_pose, log_pose_to_rerun, joystick
 
-# Initialize position and orientation from the existing T matrix
-position = T[:3, 3]  # Extract position from T matrix
-orientation = R.from_matrix(T[:3, :3])  # Extract orientation from T matrix
+from hand_tracking.hand_tracker import HandTracker
+from hand_tracking.draw_utils import draw_hand, draw_finger_tips, draw_gesture_status
 
-# Safety threshold for joint angle changes (in radians)
-SAFETY_THRESHOLD = 5  # Adjust this value based on your robot's requirements
+from tools.config_loader import get_config_loader 
 
-try:
-    while True:
-        pygame.event.pump()
-        lx, ly = joystick.get_axis(0), joystick.get_axis(1)
-        rx, ry = joystick.get_axis(2), joystick.get_axis(3)
+from lerobot.robots.lelamp_follower import LeLampFollowerConfig, LeLampFollower
+from lerobot.teleoperators.lelamp_leader import LeLampLeaderConfig, LeLampLeader
 
-        def dz(x, t=0.1): return x if abs(x) > t else 0
-        lx, ly, rx, ry = dz(lx), dz(ly), dz(rx), dz(ry)
+# PID Parameters
+kp = 20
+max_delta = 10
 
-        # Update pose using new quaternion-based approach
-        position, orientation = update_pose(position, orientation, lx, ly, rx, ry)
-        log_pose_to_rerun(position, orientation)
+# Init Camera
+cap = cv2.VideoCapture(0)
+if not cap.isOpened():
+    raise RuntimeError("No camera found. Please connect a camera.")
 
-        # Convert position and orientation to transformation matrix for IK
-        H = np.eye(4)
-        H[:3, :3] = orientation.as_matrix()
-        H[:3, 3] = position
+hand_tracker = HandTracker(distance_threshold=0.1)
 
-        pos = H[:3, 3]
+# Init robot device
+robot_config = get_config_loader().get_follower_config()
+robot_config = LeLampFollowerConfig(
+    port=robot_config.port,
+    id=robot_config.id,
+)
+robot = LeLampFollower(robot_config)
+robot.connect(calibrate=False)
 
-        # flip x and y
-        pos = np.array([pos[0], -pos[1], pos[2]])
-        print(pos)
+action = None
 
-        colors = np.array([[255, 0, 0]])
+# Get robot observation
+observation = robot.get_observation()
 
-        # Visualize end-effector position
-        rr.log(
-            "my_points",
-            rr.Points3D(pos, colors=colors, radii=0.05)
-        )
 
-        q = ik.ik(q_sample, H, frame="gripper_link")
+# Copy into action if ends with .pos or .intensity
+action = {k: v for k, v in observation.items() if k.endswith(".pos") or k.endswith(".intensity")}
+
+# Light State
+is_light_on = False
+while True:
+
+    # print("Robot observation:", observation)
+
+    # Capture current camera frame
+    success, img = cap.read()
+
+    if not success:
+        print("Failed to capture image from camera.")
+        continue
+    
+    # Update hand tracker with current frame
+    hand_tracker.update(img)
+    hands = hand_tracker.get_hands_positions(img)
+
+    # Check for tap and hold gestures
+    is_tap = hand_tracker.isTap()
+    is_hold = hand_tracker.isHold()
+
+    if is_tap:
+        is_light_on = not is_light_on
+        print("TAP detected!")
+
+    if is_hold and hands and hand_tracker.index_pos is not None:
+        hand = hands[0]  # Assuming we only track the first detected hand
+
+        draw_hand(img, hand, is_tap, is_hold)
+        draw_finger_tips(img, hand_tracker, is_hold)
+
+        error = hand_tracker.index_pos - [0.5, 0.5]  # Centered at (0.5, 0.5)
         
-        # Safety check: compare q_sample and q
-        if q is not None and q_sample is not None:
-            joint_diff = np.abs(q - q_sample)
-            max_diff = np.max(joint_diff)
-            
-            if max_diff > SAFETY_THRESHOLD:
-                print(f"SAFETY WARNING: Large joint angle change detected!")
-                print(f"Maximum change: {max_diff:.4f} radians (threshold: {SAFETY_THRESHOLD})")
-                print(f"Joint differences: {joint_diff}")
-                print("Shutting down for safety...")
-                break
+        # If error is too small, reset to zero
+        error_threshold = 0.05
+        if abs(error[0]) < error_threshold:
+            error[0] = 0
+        if abs(error[1]) < error_threshold:
+            error[1] = 0
         
-        radian_angles = {
-            "shoulder_pan": q[0],
-            "shoulder_lift": q[1],
-            "elbow_flex": q[2],
-            "wrist_flex": q[3],
-            "wrist_roll": q[4],
-            "gripper": q[5],
-        }
+        print("Hand position error:", error)
+        error[0] = kp * error[0]
+        error[1] = kp * error[1]
+        error = np.clip(error, -max_delta, max_delta)
 
-        set_joints_radians(radian_angles)
-        q_sample = q
+        print("Error:", error)
+        action["shoulder_pan.pos"] += error[0]
+        action["wrist_flex.pos"] += - error[1]
 
-        pygame.time.wait(50)
+        # Ensure action values are within the range [-100, 100]
+        action["shoulder_pan.pos"] = np.clip(action["shoulder_pan.pos"], -100, 100)
+        action["wrist_flex.pos"] = np.clip(action["wrist_flex.pos"], -100, 100)
 
-except KeyboardInterrupt:
-    print("Exiting...")
+        print("Action after error correction:", action["shoulder_pan.pos"], action["wrist_flex.pos"])
 
-finally:
-    pygame.quit()
+
+        pass
+    else:
+        draw_gesture_status(img, is_tap, is_hold)
+        draw_finger_tips(img, hand_tracker, is_hold)
+
+    if is_light_on:
+        action["led.intensity"] = 50
+    else:
+        action["led.intensity"] = 0
+    # Send action to robot
+    robot.send_action(action)   
+
+    cv2.imshow("Hand Tracker App", img)
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break

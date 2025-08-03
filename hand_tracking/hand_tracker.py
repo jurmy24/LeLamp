@@ -36,9 +36,12 @@ class HandTracker:
         img = cv2.flip(img, 1)
 
         results = self.hands.process(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-        if results.multi_hand_landmarks is not None:
+        if results.multi_hand_landmarks is not None and results.multi_handedness is not None:
             palm_centers = []
-            for landmarks in results.multi_hand_landmarks:
+            for landmarks, handedness in zip(results.multi_hand_landmarks, results.multi_handedness):
+                # Only process right hand
+                if handedness.classification[0].label != 'Right':
+                    continue
                 middle_finger_pip_landmark = landmarks.landmark[
                     mp_hands.HandLandmark.MIDDLE_FINGER_PIP
                 ]
@@ -62,8 +65,11 @@ class HandTracker:
         current_time = time.time()
         self.just_tapped = False
         
-        if results.multi_hand_landmarks is not None:
-            for landmarks in results.multi_hand_landmarks:
+        if results.multi_hand_landmarks is not None and results.multi_handedness is not None:
+            for landmarks, handedness in zip(results.multi_hand_landmarks, results.multi_handedness):
+                # Only process right hand
+                if handedness.classification[0].label != 'Right':
+                    continue
                 index_tip = landmarks.landmark[mp_hands.HandLandmark.INDEX_FINGER_TIP]
                 thumb_tip = landmarks.landmark[mp_hands.HandLandmark.THUMB_TIP]
                 
