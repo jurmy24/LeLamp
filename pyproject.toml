@@ -1,0 +1,28 @@
+[project]
+name = "le-lamp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "lerobot[feetech]",
+    "mediapipe>=0.10.14",
+    "numpy>=2.2.6",
+    "opencv-contrib-python>=4.12.0.88",
+    "opencv-python>=4.12.0.88",
+    "pin>=3.7.0",
+    "placo>=0.9.10",
+    "pygame>=2.6.1",
+    "PyYAML>=6.0",
+    "rerun-sdk>=0.24.0",
+    "scipy>=1.16.0",
+]
+
+[tool.uv.sources]
+lerobot = { path = "../lerobot-dev" }
+
+# Add this to force the override
+[tool.uv]
+override-dependencies = [
+    "rerun-sdk>=0.24.0",
+]

@@ -1,0 +1,19 @@
+# SO101 Arm Configuration
+# Configuration file for leader and follower arm ports
+
+arms:
+  follower:
+    port: "/dev/tty.usbmodem5A7A0178351"
+    id: "lelamp"
+    enabled: true
+
+  leader:
+    port: "/dev/tty.usbmodem5A7A0170321"
+    id: "lelamp"
+    enabled: true
+
+# General settings
+settings:
+  calibration_timeout: 30 # seconds
+  connection_timeout: 10 # seconds
+  retry_attempts: 3
