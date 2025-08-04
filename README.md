@@ -47,3 +47,7 @@ This project is actively being developed. Upcoming tasks:
 - [ ] Add voice and mic capabilities
 
 More updates coming in the upcoming weeks!
+
+## License
+
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
