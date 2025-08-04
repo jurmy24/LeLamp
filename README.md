@@ -2,7 +2,7 @@
 
 ![LeLamp Banner](./images/Banner.png)
 
-An open source robot lamp based on [Apple's Elegnt](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement).
+An open source robot lamp based on [Apple's Elegnt](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement), made by [[Human Computer Lab]](https://www.humancomputerlab.com/)
 
 **This repository is a early work in progress.** We published our progress early on as we believe early feedback leads to better design iteration. To contribute ideas, you're welcome to join our [Discord](https://discord.com/invite/48pfGZwP).
 
