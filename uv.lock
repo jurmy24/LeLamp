@@ -1244,7 +1244,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "lerobot", extras = ["feetech"], directory = "../lerobot-dev" },
+    { name = "lerobot", extras = ["feetech"], git = "https://github.com/pham-tuan-binh/lerobot-dev.git" },
     { name = "mediapipe", specifier = ">=0.10.14" },
     { name = "numpy", specifier = ">=2.2.6" },
     { name = "opencv-contrib-python", specifier = ">=4.12.0.88" },
@@ -1260,7 +1260,7 @@ requires-dist = [
 [[package]]
 name = "lerobot"
 version = "0.2.0"
-source = { directory = "../lerobot-dev" }
+source = { git = "https://github.com/pham-tuan-binh/lerobot-dev.git#de98089f5957de6e929e7382fc7699c34f3dd460" }
 dependencies = [
     { name = "av" },
     { name = "cmake" },
@@ -1290,93 +1290,6 @@ dependencies = [
 feetech = [
     { name = "feetech-servo-sdk" },
 ]
-
-[package.metadata]
-requires-dist = [
-    { name = "accelerate", marker = "extra == 'smolvla'", specifier = ">=1.7.0" },
-    { name = "av", specifier = ">=14.2.0" },
-    { name = "cmake", specifier = ">=3.29.0.1" },
-    { name = "datasets", specifier = ">=2.19.0,<=3.6.0" },
-    { name = "debugpy", marker = "extra == 'dev'", specifier = ">=1.8.1" },
-    { name = "deepdiff", specifier = ">=7.0.1,<9.0.0" },
-    { name = "diffusers", specifier = ">=0.27.2" },
-    { name = "draccus", specifier = "==0.10.0" },
-    { name = "dynamixel-sdk", marker = "extra == 'dynamixel'", specifier = ">=3.7.31" },
-    { name = "einops", specifier = ">=0.8.0" },
-    { name = "feetech-servo-sdk", marker = "extra == 'feetech'", specifier = ">=1.0.0" },
-    { name = "flask", specifier = ">=3.0.3,<4.0.0" },
-    { name = "grpcio", marker = "extra == 'grpcio-dep'", specifier = "==1.73.1" },
-    { name = "grpcio-tools", marker = "extra == 'dev'", specifier = "==1.73.1" },
-    { name = "gym-aloha", marker = "extra == 'aloha'", specifier = ">=0.1.1" },
-    { name = "gym-hil", marker = "extra == 'hilserl'", specifier = ">=0.1.9" },
-    { name = "gym-pusht", marker = "extra == 'pusht'", specifier = ">=0.1.5" },
-    { name = "gym-xarm", marker = "extra == 'xarm'", specifier = ">=0.1.1" },
-    { name = "gymnasium", specifier = ">=0.29.1,<1.0.0" },
-    { name = "hf-doc-builder", marker = "extra == 'docs'", git = "https://github.com/huggingface/doc-builder.git?rev=main" },
-    { name = "hidapi", marker = "extra == 'gamepad'", specifier = ">=0.14.0" },
-    { name = "huggingface-hub", extras = ["hf-transfer", "cli"], specifier = ">=0.34.2" },
-    { name = "imageio", extras = ["ffmpeg"], specifier = ">=2.34.0,<3.0.0" },
-    { name = "jsonlines", specifier = ">=4.0.0" },
-    { name = "lerobot", extras = ["aloha"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["async"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["dev"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["docs"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["dynamixel"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["feetech"], marker = "extra == 'hopejr'" },
-    { name = "lerobot", extras = ["feetech"], marker = "extra == 'lekiwi'" },
-    { name = "lerobot", extras = ["gamepad"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["grpcio-dep"], marker = "extra == 'async'" },
-    { name = "lerobot", extras = ["grpcio-dep"], marker = "extra == 'dev'" },
-    { name = "lerobot", extras = ["grpcio-dep"], marker = "extra == 'hilserl'" },
-    { name = "lerobot", extras = ["hilserl"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["hopejr"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["intelrealsense"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["kinematics"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["lekiwi"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["pi0"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["placo-dep"], marker = "extra == 'hilserl'" },
-    { name = "lerobot", extras = ["placo-dep"], marker = "extra == 'kinematics'" },
-    { name = "lerobot", extras = ["pusht"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["pygame-dep"], marker = "extra == 'gamepad'" },
-    { name = "lerobot", extras = ["pygame-dep"], marker = "extra == 'hopejr'" },
-    { name = "lerobot", extras = ["smolvla"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["test"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["transformers-dep"], marker = "extra == 'hilserl'" },
-    { name = "lerobot", extras = ["transformers-dep"], marker = "extra == 'pi0'" },
-    { name = "lerobot", extras = ["transformers-dep"], marker = "extra == 'smolvla'" },
-    { name = "lerobot", extras = ["video-benchmark"], marker = "extra == 'all'" },
-    { name = "lerobot", extras = ["xarm"], marker = "extra == 'all'" },
-    { name = "matplotlib", marker = "extra == 'async'", specifier = ">=3.10.3" },
-    { name = "mock-serial", marker = "sys_platform != 'win32' and extra == 'test'", specifier = ">=0.0.1" },
-    { name = "num2words", marker = "extra == 'smolvla'", specifier = ">=0.5.14" },
-    { name = "opencv-python-headless", specifier = ">=4.9.0" },
-    { name = "packaging", specifier = ">=24.2" },
-    { name = "pandas", marker = "extra == 'video-benchmark'", specifier = ">=2.2.2" },
-    { name = "placo", marker = "extra == 'placo-dep'", specifier = ">=0.9.6" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.7.0" },
-    { name = "protobuf", marker = "extra == 'grpcio-dep'", specifier = "==6.31.0" },
-    { name = "pygame", marker = "extra == 'pygame-dep'", specifier = ">=2.5.1" },
-    { name = "pymunk", marker = "extra == 'pusht'", specifier = ">=6.6.0,<7.0.0" },
-    { name = "pynput", specifier = ">=1.7.7" },
-    { name = "pyrealsense2", marker = "sys_platform != 'darwin' and extra == 'intelrealsense'", specifier = ">=2.55.1.6486" },
-    { name = "pyrealsense2-macosx", marker = "sys_platform == 'darwin' and extra == 'intelrealsense'", specifier = ">=2.54" },
-    { name = "pyserial", specifier = ">=3.5" },
-    { name = "pytest", marker = "extra == 'test'", specifier = ">=8.1.0" },
-    { name = "pytest-cov", marker = "extra == 'test'", specifier = ">=5.0.0" },
-    { name = "pytest-timeout", marker = "extra == 'test'", specifier = ">=2.4.0" },
-    { name = "pyzmq", marker = "extra == 'lekiwi'", specifier = ">=26.2.1" },
-    { name = "rerun-sdk", specifier = ">=0.21.0,<0.23.0" },
-    { name = "safetensors", marker = "extra == 'smolvla'", specifier = ">=0.4.3" },
-    { name = "scikit-image", marker = "extra == 'video-benchmark'", specifier = ">=0.23.2" },
-    { name = "termcolor", specifier = ">=2.4.0,<4.0.0" },
-    { name = "torch", specifier = ">=2.2.1" },
-    { name = "torchcodec", marker = "(platform_machine != 'aarch64' and platform_machine != 'arm64' and platform_machine != 'armv7l' and sys_platform == 'linux') or (platform_machine != 'x86_64' and sys_platform == 'darwin') or (sys_platform != 'darwin' and sys_platform != 'linux' and sys_platform != 'win32')", specifier = ">=0.2.1" },
-    { name = "torchvision", specifier = ">=0.21.0" },
-    { name = "transformers", marker = "extra == 'transformers-dep'", specifier = ">=4.50.3,<4.52.0" },
-    { name = "wandb", specifier = ">=0.20.0" },
-    { name = "watchdog", marker = "extra == 'docs'", specifier = ">=6.0.0" },
-]
-provides-extras = ["pygame-dep", "placo-dep", "transformers-dep", "grpcio-dep", "feetech", "dynamixel", "gamepad", "hopejr", "lekiwi", "kinematics", "intelrealsense", "pi0", "smolvla", "hilserl", "async", "docs", "dev", "test", "video-benchmark", "aloha", "pusht", "xarm", "all"]
 
 [[package]]
 name = "markupsafe"
