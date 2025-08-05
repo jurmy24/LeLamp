@@ -28,6 +28,99 @@ Currently in development. This version will be our main model in the future, whe
 
 You can view the live CAD model on [OnShape](https://cad.onshape.com/documents/7ff6d1fd85a1383ea9f71557/w/b399d2ceb47c6775362882dc/e/14b04feff73ad1eb6f6b1f57?renderMode=0&uiState=688fc0a88a82666976c1a86f)
 
+
+## Set-up for LeLamp on SO10x
+
+If you're using the SO10x arms, follow this to get LeLamp up and running.
+
+### Initial Set-up
+
+If you're setting up the SO10x arms for the first time, best practice is to follow [this tutorial first](https://huggingface.co/docs/lerobot/en/so101). There are 3 checkpoints you need to do:
+- Motor Set Up
+- Motor Calibration
+- Teleoperation
+
+### 3D Printing and Modifications
+
+After initial testing that the SO101 works. you can unscrew the gripper on the arm and start fitting the 3D printed lamp head. The 3D printed files are inside `prints/modifications_for_so101/`. You'll need to print all these files:
+- **MotorMount**: We designed a twist snap mechanism to quickly iterate on different lamp head designs. This will be attached to the motor horn on the robot arm.
+- **LampHead**: This is the lamp head to be attached to the motor mount through twist snap mechanism.
+- **CameraMount**: Camera mount for global shutter usb cameras. **If you don't have a camera, you don't need to print this**.
+
+### Calibration
+
+To calibrate the arms, here is what you'll need to run. The process is similiar to how you'd set up the SO101 arm:
+
+```bash
+# For uv init
+uv sync
+
+# For finding usb port
+uv run -m lerobot.find_port
+
+# For LeLampFollower
+uv run -m lerobot.calibrate \
+    --robot.type=lelamp_follower \
+    --robot.port=/dev/tty.usbmodem58760431551 \ # <- The port of your robot
+    --robot.id=lelamp # <- Give the robot a unique name
+
+# For LeLampLeader
+uv run -m lerobot.calibrate \
+    --teleop.type=lelamp_leader \
+    --teleop.port=/dev/tty.usbmodem58760431551 \ # <- The port of your robot
+    --teleop.id=lelamp # <- Give the robot a unique name
+```
+
+### Teleoperation
+
+To teleop the lamp, there are 2 methods.
+
+#### Method 1: Use LeRobot's Script
+
+LeLamp is compatible with LeRobot's teleoperate module.
+
+```bash
+uv run -m lerobot.teleoperate \
+    --robot.type=lelamp_follower \
+    --robot.port=/dev/tty.usbmodem58760431541 \
+    --robot.id=lelamp \
+    --teleop.type=lelamp_leader \
+    --teleop.port=/dev/tty.usbmodem58760431551 \
+    --teleop.id=lelamp
+```
+
+#### Method 2: Use LeLamp's teleop module
+
+To use LeLamp, we provide a quick and easy to remember teleop method. First, you'll need to edit the `config.json` file in this repository to have your lamp's id and port.
+
+```yaml
+# SO101 Arm Configuration
+# Configuration file for leader and follower arm ports
+
+arms:
+  follower:
+    port: "/dev/tty.usbmodem5A7A0178351" <- edit here
+    id: "lelamp" <- edit here
+    enabled: true
+
+  leader:
+    port: "/dev/tty.usbmodem5A7A0170321" <- edit here
+    id: "lelamp" <- edit here
+    enabled: true
+
+# General settings
+settings:
+  calibration_timeout: 30 # seconds
+  connection_timeout: 10 # seconds
+  retry_attempts: 3
+```
+
+Then you only need to run our teleop module.
+
+```bash
+uv run -m tools.teleop
+```
+
 ## Demo
 
 `main.py` contains a hand tracking demo that uses a PID loop to control the shoulder pan and wrist flex of the arm.
