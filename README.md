@@ -16,7 +16,9 @@ LeLamp is being developed on two parallel tracks:
 
 This version is for those who already own an SO-101 or SO-100 arm from The Robot Studio. We built it for quick prototyping.
 
-3D files for modifications can be found in `prints/modifications_for_so101/`
+3D files for modifications can be found in `prints/modifications_for_so101/`. You'll need a SO101 or SO100 for this modification or any STS3215 based robot. The modification is a replacement for the gripper on these arms, effectively reducing the arm DOF from 6 to 5.
+
+Biggest thanks to Jennie and Lily for sponsoring the SO101 arms in this project. If you want to buy a kit at a discounted price, check out [Seeed Studio](https://www.seeedstudio.com/SO-ARM101-Low-Cost-AI-Arm-Kit-Pro-p-6427.html?sensecap_affiliate=3gToNR2&referring_service=link)
 
 ### **2. From Scratch Design**
 
