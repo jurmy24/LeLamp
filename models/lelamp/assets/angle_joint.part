@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "7ff6d1fd85a1383ea9f71557",
+    "documentMicroversion": "1753062e08f3512d3a3048a6",
+    "elementId": "5aae4c56adf05f0e355fc279",
+    "fullConfiguration": "default",
+    "id": "M7C2rsjHjTiX0zW2t",
+    "isStandardContent": false,
+    "name": "Angle Joint <4>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}
