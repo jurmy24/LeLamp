@@ -58,6 +58,7 @@
       <geom type="mesh" class="collision" pos="0 -7.80626e-18 0" quat="0 0 0 1" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
       <!-- Link square_joint -->
       <body name="square_joint" pos="2.71051e-20 0.0286 -6.50521e-19" quat="0.0155579 -0.0155579 0.706936 0.706936">
+        <site name="imu_site" pos="0 0 0" />
         <!-- Joint from dc15_a01_dummy_assy_idle_asm to square_joint -->
         <joint axis="0 0 1" name="1" type="hinge"/>
         <inertial pos="-8.75044e-06 -0.000538186 0.0283784" mass="0.0304303" fullinertia="6.68219e-06 6.31947e-06 3.33001e-06 6.6143e-10 -1.534e-09 -1.78501e-07"/>
@@ -274,5 +275,9 @@
     <position class="lelamp" name="4" joint="4"/>
     <position class="lelamp" name="5" joint="5"/>
   </actuator>
+  <sensor>
+    <accelerometer name="accel_sensor" site="imu_site"/>
+    <gyro name="gyro_sensor" site="imu_site"/>
+  </sensor>
   <equality/>
 </mujoco>
