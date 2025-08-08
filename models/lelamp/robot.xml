@@ -254,21 +254,21 @@
     </body>
   </worldbody>
   <asset>
-    <mesh file="lamp_head.stl"/>
-    <mesh file="dc15_a01_case_b_dummy.stl"/>
-    <mesh file="arm_length_15cm.stl"/>
-    <mesh file="dc15_a01_horn_dummy.stl"/>
     <mesh file="b3b_eh.stl"/>
     <mesh file="dc15_a01_horn_idle2_dummy.stl"/>
     <mesh file="square_joint.stl"/>
-    <mesh file="dc15_a01_led_cap2_dummy.stl"/>
-    <mesh file="angle_joint.stl"/>
     <mesh file="arm_length_10cm.stl"/>
     <mesh file="dc15_a01_case_m_dummy.stl"/>
+    <mesh file="arm_length_15cm.stl"/>
+    <mesh file="bts2_m2_6x8.stl"/>
+    <mesh file="lamp_head.stl"/>
+    <mesh file="dc15_a01_horn_dummy.stl"/>
+    <mesh file="base.stl"/>
+    <mesh file="angle_joint.stl"/>
+    <mesh file="dc15_a01_case_b_dummy.stl"/>
     <mesh file="dc15_a01_idle_cap_dummy.stl"/>
     <mesh file="dc15_a01_case_f_dummy.stl"/>
-    <mesh file="bts2_m2_6x8.stl"/>
-    <mesh file="base.stl"/>
+    <mesh file="dc15_a01_led_cap2_dummy.stl"/>
     <material name="base_material" rgba="0.615686 0.811765 0.929412 1"/>
     <material name="dc15_a01_led_cap2_dummy_material" rgba="0.768627 0.886275 0.952941 1"/>
     <material name="bts2_m2_6x8_material" rgba="0.980392 0.713725 0.00392157 1"/>
