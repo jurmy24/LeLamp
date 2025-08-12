@@ -4,7 +4,7 @@
 
 An open source robot lamp based on [Apple's Elegnt](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement), made by [[Human Computer Lab]](https://www.humancomputerlab.com/)
 
-**This repository is an early work in progress.** We published our progress early on as we believe early feedback leads to better design iteration. To contribute ideas, you're welcome to join our [Discord](https://discord.com/invite/48pfGZwP).
+**This repository is an early work in progress.** We published our progress early on as we believe early feedback leads to better design iteration. To contribute ideas, you're welcome to join our [Discord](https://discord.gg/wVF99EtRzg).
 
 ## Project Overview
 
@@ -28,7 +28,6 @@ Currently in development. This version will be our main model in the future, whe
 
 You can view the live CAD model on [OnShape](https://cad.onshape.com/documents/7ff6d1fd85a1383ea9f71557/w/b399d2ceb47c6775362882dc/e/14b04feff73ad1eb6f6b1f57?renderMode=0&uiState=688fc0a88a82666976c1a86f)
 
-
 ## Set-up for LeLamp on SO10x
 
 If you're using the SO10x arms, follow this to get LeLamp up and running.
@@ -36,6 +35,7 @@ If you're using the SO10x arms, follow this to get LeLamp up and running.
 ### Initial Set-up
 
 If you're setting up the SO10x arms for the first time, best practice is to follow [this tutorial first](https://huggingface.co/docs/lerobot/en/so101). There are 3 checkpoints you need to do:
+
 - Motor Set Up
 - Motor Calibration
 - Teleoperation
@@ -43,6 +43,7 @@ If you're setting up the SO10x arms for the first time, best practice is to foll
 ### 3D Printing and Modifications
 
 After initial testing that the SO101 works. you can unscrew the gripper on the arm and start fitting the 3D printed lamp head. The 3D printed files are inside `prints/modifications_for_so101/`. You'll need to print all these files:
+
 - **MotorMount**: We designed a twist snap mechanism to quickly iterate on different lamp head designs. This will be attached to the motor horn on the robot arm.
 - **LampHead**: This is the lamp head to be attached to the motor mount through twist snap mechanism.
 - **CameraMount**: Camera mount for global shutter usb cameras. **If you don't have a camera, you don't need to print this**.
