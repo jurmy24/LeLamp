@@ -1,0 +1,13 @@
+{
+    "configuration": "default",
+    "documentId": "16c9706360b5ad34f9c8db49",
+    "documentMicroversion": "3f42ef3c4d39e2602d13ff56",
+    "elementId": "aadcae4295b0e551fba822bf",
+    "fullConfiguration": "default",
+    "id": "MdqPgxWdGQOQtWZXq",
+    "isStandardContent": false,
+    "name": "LampArm (Base-Elbow) <1>",
+    "partId": "JHD",
+    "suppressed": false,
+    "type": "Part"
+}

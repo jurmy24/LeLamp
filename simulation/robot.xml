@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <!-- Generated using onshape-to-robot -->
-<!-- Onshape document_id: 7ff6d1fd85a1383ea9f71557 -->
-<mujoco model="lelamp">
+<!-- Onshape document_id: 16c9706360b5ad34f9c8db49 -->
+<mujoco model="simulation">
   <compiler angle="radian" meshdir="assets" autolimits="true"/>
   <default>
-    <default class="lelamp">
+    <default class="simulation">
       <joint frictionloss="0.1" armature="0.005"/>
       <position kp="50" dampratio="1"/>
       <default class="visual">
@@ -33,261 +33,240 @@
     </default>
   </default>
   <worldbody>
-    <!-- Link dc15_a01_dummy_assy_idle_asm -->
-    <body name="dc15_a01_dummy_assy_idle_asm" pos="0 0 0" quat="1 0 0 0" childclass="lelamp">
-      <site name="imu_site" pos="0 0 0" />
-      <freejoint name="dc15_a01_dummy_assy_idle_asm_freejoint"/>
-      <inertial pos="-1.88967e-06 0.00732928 0.00959762" mass="0.140913" fullinertia="9.08799e-05 8.05617e-05 0.000163373 1.81155e-09 1.89009e-09 1.28621e-07"/>
-      <!-- Part base -->
-      <geom type="mesh" class="visual" pos="0 0.0075 0.001" quat="1 0 -2.77556e-16 -0" mesh="base" material="base_material"/>
-      <geom type="mesh" class="collision" pos="0 0.0075 0.001" quat="1 0 -2.77556e-16 -0" mesh="base" material="base_material"/>
-      <!-- Part dc15_a01_led_cap2_dummy -->
-      <geom type="mesh" class="visual" pos="1.73472e-18 -0.0075 0.0049" quat="0 1 0 0" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-      <geom type="mesh" class="collision" pos="1.73472e-18 -0.0075 0.0049" quat="0 1 0 0" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-      <!-- Part bts2_m2_6x8 -->
-      <geom type="mesh" class="visual" pos="0 0 0.0274" quat="0.707107 0.707107 -0 -1.24062e-30" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-      <geom type="mesh" class="collision" pos="0 0 0.0274" quat="0.707107 0.707107 -0 -1.24062e-30" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-      <!-- Part b3b_eh -->
-      <geom type="mesh" class="visual" pos="0.0077 0.009 0.0121" quat="0.5 -0.5 0.5 -0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-      <geom type="mesh" class="collision" pos="0.0077 0.009 0.0121" quat="0.5 -0.5 0.5 -0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-      <!-- Part b3b_eh_2 -->
-      <geom type="mesh" class="visual" pos="-0.0077 0.009 0.0121" quat="0.5 -0.5 -0.5 0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-      <geom type="mesh" class="collision" pos="-0.0077 0.009 0.0121" quat="0.5 -0.5 -0.5 0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-      <!-- Part dc15_a01_case_m_dummy -->
-      <geom type="mesh" class="visual" pos="1.73472e-18 -1.73472e-18 0.0225" quat="0 0 0 1" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-      <geom type="mesh" class="collision" pos="1.73472e-18 -1.73472e-18 0.0225" quat="0 0 0 1" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-      <!-- Part bts2_m2_6x8_2 -->
-      <geom type="mesh" class="visual" pos="0 0 0.0018" quat="0 -0 -0.707107 0.707107" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-      <geom type="mesh" class="collision" pos="0 0 0.0018" quat="0 -0 -0.707107 0.707107" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-      <!-- Part dc15_a01_horn_dummy -->
-      <geom type="mesh" class="visual" pos="0 -1.73472e-18 0.0261" quat="0.707107 0.707107 -0 -1.24062e-30" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-      <geom type="mesh" class="collision" pos="0 -1.73472e-18 0.0261" quat="0.707107 0.707107 -0 -1.24062e-30" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-      <!-- Part dc15_a01_case_f_dummy -->
-      <geom type="mesh" class="visual" pos="1.73472e-18 -1.73472e-18 0.0225" quat="0 0 0 1" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-      <geom type="mesh" class="collision" pos="1.73472e-18 -1.73472e-18 0.0225" quat="0 0 0 1" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-      <!-- Part dc15_a01_case_b_dummy -->
-      <geom type="mesh" class="visual" pos="0 -3.46945e-18 0.003" quat="0 0 0 1" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-      <geom type="mesh" class="collision" pos="0 -3.46945e-18 0.003" quat="0 0 0 1" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-      <!-- Part dc15_a01_horn_idle2_dummy -->
-      <geom type="mesh" class="visual" pos="0 0 0.0029" quat="4.79291e-19 0 -1 -1.11022e-16" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-      <geom type="mesh" class="collision" pos="0 0 0.0029" quat="4.79291e-19 0 -1 -1.11022e-16" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-      <!-- Part dc15_a01_idle_cap_dummy -->
-      <geom type="mesh" class="visual" pos="0 0 0.0002" quat="0 -0 -0.707107 0.707107" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-      <geom type="mesh" class="collision" pos="0 0 0.0002" quat="0 -0 -0.707107 0.707107" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-      <!-- Link square_joint -->
-      <body name="square_joint" pos="4.75779e-29 -1.73472e-18 0.0288" quat="0.444744 0 0 -0.895658">
-        <!-- Joint from dc15_a01_dummy_assy_idle_asm to square_joint -->
-        <joint axis="0 0 1" name="1" type="hinge" range="-4.063370492512279 2.2198148146673073" class="sts3215"/>
-        <inertial pos="-8.75044e-06 -0.000538186 0.0283784" mass="0.0304303" fullinertia="6.68219e-06 6.31947e-06 3.33001e-06 6.6143e-10 -1.534e-09 -1.78501e-07"/>
-        <!-- Part square_joint -->
-        <geom type="mesh" class="visual" pos="-1.92593e-34 -1.92593e-34 0" quat="1 -0 2.34507e-19 2.74968e-38" mesh="square_joint" material="square_joint_material"/>
-        <geom type="mesh" class="collision" pos="-1.92593e-34 -1.92593e-34 0" quat="1 -0 2.34507e-19 2.74968e-38" mesh="square_joint" material="square_joint_material"/>
-        <!-- Part dc15_a01_led_cap2_dummy_2 -->
-        <geom type="mesh" class="visual" pos="2.10937e-16 -0.00985 0.04425" quat="0.707107 0.707107 2.22045e-16 -5.83644e-16" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-        <geom type="mesh" class="collision" pos="2.10937e-16 -0.00985 0.04425" quat="0.707107 0.707107 2.22045e-16 -5.83644e-16" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-        <!-- Part bts2_m2_6x8_3 -->
-        <geom type="mesh" class="visual" pos="3.13823e-15 0.01265 0.03675" quat="1 3.91857e-16 6.66134e-16 1.67497e-16" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-        <geom type="mesh" class="collision" pos="3.13823e-15 0.01265 0.03675" quat="1 3.91857e-16 6.66134e-16 1.67497e-16" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-        <!-- Part b3b_eh_3 -->
-        <geom type="mesh" class="visual" pos="0.0077 -0.00265 0.02775" quat="5.0358e-16 -0.707107 5.55112e-16 -0.707107" mesh="b3b_eh" material="b3b_eh_material"/>
-        <geom type="mesh" class="collision" pos="0.0077 -0.00265 0.02775" quat="5.0358e-16 -0.707107 5.55112e-16 -0.707107" mesh="b3b_eh" material="b3b_eh_material"/>
-        <!-- Part b3b_eh_4 -->
-        <geom type="mesh" class="visual" pos="-0.0077 -0.00265 0.02775" quat="3.58633e-16 -0.707107 -3.33067e-16 0.707107" mesh="b3b_eh" material="b3b_eh_material"/>
-        <geom type="mesh" class="collision" pos="-0.0077 -0.00265 0.02775" quat="3.58633e-16 -0.707107 -3.33067e-16 0.707107" mesh="b3b_eh" material="b3b_eh_material"/>
-        <!-- Part dc15_a01_case_m_dummy_2 -->
-        <geom type="mesh" class="visual" pos="2.48922e-15 0.00775 0.03675" quat="0 -1.90985e-16 -0.707107 -0.707107" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-        <geom type="mesh" class="collision" pos="2.48922e-15 0.00775 0.03675" quat="0 -1.90985e-16 -0.707107 -0.707107" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-        <!-- Part bts2_m2_6x8_4 -->
-        <geom type="mesh" class="visual" pos="-1.98942e-16 -0.01295 0.03675" quat="1.23511e-13 5.82867e-16 -0 1" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-        <geom type="mesh" class="collision" pos="-1.98942e-16 -0.01295 0.03675" quat="1.23511e-13 5.82867e-16 -0 1" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-        <!-- Part dc15_a01_horn_dummy_2 -->
-        <geom type="mesh" class="visual" pos="2.95961e-15 0.01135 0.03675" quat="1 3.91857e-16 6.66134e-16 1.67497e-16" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-        <geom type="mesh" class="collision" pos="2.95961e-15 0.01135 0.03675" quat="1 3.91857e-16 6.66134e-16 1.67497e-16" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-        <!-- Part dc15_a01_case_f_dummy_2 -->
-        <geom type="mesh" class="visual" pos="2.48922e-15 0.00775 0.03675" quat="0 -1.90985e-16 -0.707107 -0.707107" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-        <geom type="mesh" class="collision" pos="2.48922e-15 0.00775 0.03675" quat="0 -1.90985e-16 -0.707107 -0.707107" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-        <!-- Part dc15_a01_case_b_dummy_2 -->
-        <geom type="mesh" class="visual" pos="-2.43083e-17 -0.01175 0.03675" quat="0 -1.90985e-16 -0.707107 -0.707107" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-        <geom type="mesh" class="collision" pos="-2.43083e-17 -0.01175 0.03675" quat="0 -1.90985e-16 -0.707107 -0.707107" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-        <!-- Part dc15_a01_horn_idle2_dummy_2 -->
-        <geom type="mesh" class="visual" pos="-1.01745e-17 -0.01185 0.03675" quat="6.66134e-16 5.14171e-16 -0.707107 0.707107" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-        <geom type="mesh" class="collision" pos="-1.01745e-17 -0.01185 0.03675" quat="6.66134e-16 5.14171e-16 -0.707107 0.707107" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-        <!-- Part dc15_a01_idle_cap_dummy_2 -->
-        <geom type="mesh" class="visual" pos="-4.14788e-16 -0.01455 0.03675" quat="1.23511e-13 5.82867e-16 -0 1" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-        <geom type="mesh" class="collision" pos="-4.14788e-16 -0.01455 0.03675" quat="1.23511e-13 5.82867e-16 -0 1" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-        <!-- Link dc15_a01_dummy_assy_idle_asm_2 -->
-        <body name="dc15_a01_dummy_assy_idle_asm_2" pos="2.95779e-15 0.01405 0.03675" quat="0.707107 -0.707107 3.33067e-16 5.83302e-16">
-          <!-- Joint from square_joint to dc15_a01_dummy_assy_idle_asm_2 -->
-          <joint axis="0 0 1" name="2" type="hinge" range="-2.4943173274451675 1.3454070269423575" class="sts3215"/>
-          <inertial pos="0.0822208 -0.126814 -0.0137912" mass="0.0439213" fullinertia="0.000137751 6.04949e-05 0.000192616 8.65848e-05 -5.06943e-07 7.78758e-07"/>
-          <!-- Part arm_length_15cm -->
-          <geom type="mesh" class="visual" pos="-6.68316e-18 1.38778e-17 0.002" quat="4.39562e-16 0.959033 0.283294 3.04226e-15" mesh="arm_length_15cm" material="arm_length_15cm_material"/>
-          <geom type="mesh" class="collision" pos="-6.68316e-18 1.38778e-17 0.002" quat="4.39562e-16 0.959033 0.283294 3.04226e-15" mesh="arm_length_15cm" material="arm_length_15cm_material"/>
-          <!-- Part dc15_a01_led_cap2_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.112553 -0.173428 -0.0231" quat="4.07021e-14 -0.959033 -0.283294 3.72267e-14" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.112553 -0.173428 -0.0231" quat="4.07021e-14 -0.959033 -0.283294 3.72267e-14" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-          <!-- Part bts2_m2_6x8_5 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0006" quat="0.678139 0.678139 0.200319 0.200319" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0006" quat="0.678139 0.678139 0.200319 0.200319" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-          <!-- Part b3b_eh_5 -->
-          <geom type="mesh" class="visual" pos="0.110051 -0.155393 -0.0159" quat="0.621164 -0.621164 0.337869 -0.337869" mesh="b3b_eh" material="b3b_eh_material"/>
-          <geom type="mesh" class="collision" pos="0.110051 -0.155393 -0.0159" quat="0.621164 -0.621164 0.337869 -0.337869" mesh="b3b_eh" material="b3b_eh_material"/>
-          <!-- Part b3b_eh_6 -->
-          <geom type="mesh" class="visual" pos="0.0971234 -0.163761 -0.0159" quat="0.337869 -0.337869 -0.621164 0.621164" mesh="b3b_eh" material="b3b_eh_material"/>
-          <geom type="mesh" class="collision" pos="0.0971234 -0.163761 -0.0159" quat="0.337869 -0.337869 -0.621164 0.621164" mesh="b3b_eh" material="b3b_eh_material"/>
-          <!-- Part dc15_a01_case_m_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0055" quat="0.283294 1.03332e-15 -8.88178e-16 -0.959033" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0055" quat="0.283294 1.03332e-15 -8.88178e-16 -0.959033" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-          <!-- Part bts2_m2_6x8_6 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0262" quat="0.200319 -0.200319 0.678139 -0.678139" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0262" quat="0.200319 -0.200319 0.678139 -0.678139" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-          <!-- Part dc15_a01_horn_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0019" quat="0.678139 0.678139 0.200319 0.200319" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0019" quat="0.678139 0.678139 0.200319 0.200319" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-          <!-- Part dc15_a01_case_f_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0055" quat="0.283294 1.03332e-15 -8.88178e-16 -0.959033" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0055" quat="0.283294 1.03332e-15 -8.88178e-16 -0.959033" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-          <!-- Part dc15_a01_case_b_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.025" quat="0.283294 1.03332e-15 -8.88178e-16 -0.959033" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.025" quat="0.283294 1.03332e-15 -8.88178e-16 -0.959033" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-          <!-- Part dc15_a01_horn_idle2_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0251" quat="3.89445e-16 0.283294 -0.959033 -1.73688e-14" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0251" quat="3.89445e-16 0.283294 -0.959033 -1.73688e-14" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-          <!-- Part dc15_a01_idle_cap_dummy_3 -->
-          <geom type="mesh" class="visual" pos="0.108478 -0.167132 -0.0278" quat="0.200319 -0.200319 0.678139 -0.678139" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-          <geom type="mesh" class="collision" pos="0.108478 -0.167132 -0.0278" quat="0.200319 -0.200319 0.678139 -0.678139" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-          <!-- Link arm_length_10cm -->
-          <body name="arm_length_10cm" pos="0.108478 -0.167132 0.0008" quat="0.720403 -1.01825e-14 -2.27596e-14 -0.693556">
-            <!-- Joint from dc15_a01_dummy_assy_idle_asm_2 to arm_length_10cm -->
-            <joint axis="0 0 1" name="3" type="hinge" range="-1.3833767485832635 2.4563476058042615" class="sts3215"/>
-            <inertial pos="0.000125498 -0.115742 -0.013751" mass="0.040387" fullinertia="9.51594e-05 4.19848e-06 9.39396e-05 1.396e-07 -2.20999e-09 6.104e-07"/>
-            <!-- Part arm_length_10cm -->
-            <geom type="mesh" class="visual" pos="0 1.38778e-17 0.002" quat="0 1 0 0" mesh="arm_length_10cm" material="arm_length_10cm_material"/>
-            <geom type="mesh" class="collision" pos="0 1.38778e-17 0.002" quat="0 1 0 0" mesh="arm_length_10cm" material="arm_length_10cm_material"/>
-            <!-- Part dc15_a01_led_cap2_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.15675 -0.0231" quat="8.1003e-16 1 1.23092e-14 -1.55289e-14" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.15675 -0.0231" quat="8.1003e-16 1 1.23092e-14 -1.55289e-14" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-            <!-- Part bts2_m2_6x8_7 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0006" quat="0.707107 0.707107 3.64153e-14 3.84984e-15" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0006" quat="0.707107 0.707107 3.64153e-14 3.84984e-15" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-            <!-- Part b3b_eh_7 -->
-            <geom type="mesh" class="visual" pos="0.00795 -0.14025 -0.0159" quat="0.5 -0.5 0.5 -0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-            <geom type="mesh" class="collision" pos="0.00795 -0.14025 -0.0159" quat="0.5 -0.5 0.5 -0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-            <!-- Part b3b_eh_8 -->
-            <geom type="mesh" class="visual" pos="-0.00745 -0.14025 -0.0159" quat="0.5 -0.5 -0.5 0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-            <geom type="mesh" class="collision" pos="-0.00745 -0.14025 -0.0159" quat="0.5 -0.5 -0.5 0.5" mesh="b3b_eh" material="b3b_eh_material"/>
-            <!-- Part dc15_a01_case_m_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0055" quat="2.28983e-15 -7.15001e-17 -1.39125e-15 1" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0055" quat="2.28983e-15 -7.15001e-17 -1.39125e-15 1" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-            <!-- Part bts2_m2_6x8_8 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0262" quat="2.7367e-14 -2.25334e-14 0.707107 -0.707107" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0262" quat="2.7367e-14 -2.25334e-14 0.707107 -0.707107" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-            <!-- Part dc15_a01_horn_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0019" quat="0.707107 0.707107 3.64153e-14 3.84984e-15" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0019" quat="0.707107 0.707107 3.64153e-14 3.84984e-15" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-            <!-- Part dc15_a01_case_f_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0055" quat="2.28983e-15 -7.15001e-17 -1.39125e-15 1" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0055" quat="2.28983e-15 -7.15001e-17 -1.39125e-15 1" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-            <!-- Part dc15_a01_case_b_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.025" quat="2.28983e-15 -7.15001e-17 -1.39125e-15 1" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.025" quat="2.28983e-15 -7.15001e-17 -1.39125e-15 1" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-            <!-- Part dc15_a01_horn_idle2_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0251" quat="2.46331e-15 -4.04398e-14 1 2.93038e-15" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0251" quat="2.46331e-15 -4.04398e-14 1 2.93038e-15" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-            <!-- Part dc15_a01_idle_cap_dummy_4 -->
-            <geom type="mesh" class="visual" pos="0.00025 -0.14925 -0.0278" quat="2.7367e-14 -2.25334e-14 0.707107 -0.707107" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-            <geom type="mesh" class="collision" pos="0.00025 -0.14925 -0.0278" quat="2.7367e-14 -2.25334e-14 0.707107 -0.707107" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-            <!-- Link angle_joint -->
-            <body name="angle_joint" pos="0.00025 -0.14925 0.0008" quat="1 -5.13748e-15 2.30926e-14 2.84373e-14">
-              <!-- Joint from arm_length_10cm to angle_joint -->
-              <joint axis="0 0 1" name="4" type="hinge" range="-1.680046420324199 2.159677934063326" class="sts3215"/>
-              <inertial pos="-0.00122043 -0.0302719 -0.0162582" mass="0.0271577" fullinertia="5.38249e-06 3.94214e-06 6.2876e-06 1.1386e-07 -4.06455e-09 5.13711e-09"/>
-              <!-- Part angle_joint -->
-              <geom type="mesh" class="visual" pos="0 6.93889e-18 0" quat="3.25635e-15 0.99282 -0.119621 -5.12971e-16" mesh="angle_joint" material="angle_joint_material"/>
-              <geom type="mesh" class="collision" pos="0 6.93889e-18 0" quat="3.25635e-15 0.99282 -0.119621 -5.12971e-16" mesh="angle_joint" material="angle_joint_material"/>
-              <!-- Part dc15_a01_led_cap2_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.0127787 -0.0217368 -0.01625" quat="0.55622 -0.436599 0.55622 0.436599" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.0127787 -0.0217368 -0.01625" quat="0.55622 -0.436599 0.55622 0.436599" mesh="dc15_a01_led_cap2_dummy" material="dc15_a01_led_cap2_dummy_material"/>
-              <!-- Part bts2_m2_6x8_9 -->
-              <geom type="mesh" class="visual" pos="-0.0108376 -0.0453743 -0.01625" quat="0.0845846 -0.70203 0.0845846 0.70203" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-              <geom type="mesh" class="collision" pos="-0.0108376 -0.0453743 -0.01625" quat="0.0845846 -0.70203 0.0845846 0.70203" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-              <!-- Part b3b_eh_9 -->
-              <geom type="mesh" class="visual" pos="0.00153891 -0.0326499 -0.02395" quat="1.69151e-15 -0.119621 -0.99282 1.85971e-14" mesh="b3b_eh" material="b3b_eh_material"/>
-              <geom type="mesh" class="collision" pos="0.00153891 -0.0326499 -0.02395" quat="1.69151e-15 -0.119621 -0.99282 1.85971e-14" mesh="b3b_eh" material="b3b_eh_material"/>
-              <!-- Part b3b_eh_10 -->
-              <geom type="mesh" class="visual" pos="0.00153891 -0.0326499 -0.00855" quat="0.99282 -1.85946e-14 1.9984e-15 -0.119621" mesh="b3b_eh" material="b3b_eh_material"/>
-              <geom type="mesh" class="collision" pos="0.00153891 -0.0326499 -0.00855" quat="0.99282 -1.85946e-14 1.9984e-15 -0.119621" mesh="b3b_eh" material="b3b_eh_material"/>
-              <!-- Part dc15_a01_case_m_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.00967377 -0.0406146 -0.01625" quat="0.55622 0.436599 -0.55622 0.436599" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.00967377 -0.0406146 -0.01625" quat="0.55622 0.436599 -0.55622 0.436599" mesh="dc15_a01_case_m_dummy" material="dc15_a01_case_m_dummy_material"/>
-              <!-- Part bts2_m2_6x8_10 -->
-              <geom type="mesh" class="visual" pos="-0.00475703 -0.020507 -0.01625" quat="0.70203 -0.0845846 -0.70203 -0.0845846" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-              <geom type="mesh" class="collision" pos="-0.00475703 -0.020507 -0.01625" quat="0.70203 -0.0845846 -0.70203 -0.0845846" mesh="bts2_m2_6x8" material="bts2_m2_6x8_material"/>
-              <!-- Part dc15_a01_horn_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.0105289 -0.0441115 -0.01625" quat="0.0845846 -0.70203 0.0845846 0.70203" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.0105289 -0.0441115 -0.01625" quat="0.0845846 -0.70203 0.0845846 0.70203" mesh="dc15_a01_horn_dummy" material="dc15_a01_horn_dummy_material"/>
-              <!-- Part dc15_a01_case_f_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.00967377 -0.0406146 -0.01625" quat="0.55622 0.436599 -0.55622 0.436599" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.00967377 -0.0406146 -0.01625" quat="0.55622 0.436599 -0.55622 0.436599" mesh="dc15_a01_case_f_dummy" material="dc15_a01_case_f_dummy_material"/>
-              <!-- Part dc15_a01_case_b_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.00504206 -0.0216726 -0.01625" quat="0.55622 0.436599 -0.55622 0.436599" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.00504206 -0.0216726 -0.01625" quat="0.55622 0.436599 -0.55622 0.436599" mesh="dc15_a01_case_b_dummy" material="dc15_a01_case_b_dummy_material"/>
-              <!-- Part dc15_a01_horn_idle2_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.0050183 -0.0215755 -0.01625" quat="0.436599 -0.55622 -0.436599 -0.55622" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.0050183 -0.0215755 -0.01625" quat="0.436599 -0.55622 -0.436599 -0.55622" mesh="dc15_a01_horn_idle2_dummy" material="dc15_a01_horn_idle2_dummy_material"/>
-              <!-- Part dc15_a01_idle_cap_dummy_5 -->
-              <geom type="mesh" class="visual" pos="-0.00437699 -0.0189528 -0.01625" quat="0.70203 -0.0845846 -0.70203 -0.0845846" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-              <geom type="mesh" class="collision" pos="-0.00437699 -0.0189528 -0.01625" quat="0.70203 -0.0845846 -0.70203 -0.0845846" mesh="dc15_a01_idle_cap_dummy" material="dc15_a01_idle_cap_dummy_material"/>
-              <!-- Link lamp_head -->
-              <body name="lamp_head" pos="-0.0111702 -0.0467343 -0.01625" quat="0.55622 -0.436599 0.55622 0.436599">
-                <!-- Joint from angle_joint to lamp_head -->
-                <joint axis="0 0 1" name="5" type="hinge" range="0.0 6.283185307179586" class="sts3215"/>
-                <inertial pos="-1.29122e-07 1.66808e-08 -0.0356164" mass="0.0121476" fullinertia="1.25237e-05 1.25237e-05 1.09368e-05 -4.37816e-12 -2.51697e-11 3.08887e-11"/>
-                <!-- Part lamp_head -->
-                <geom type="mesh" class="visual" pos="2.60209e-18 0 -0.08014" quat="1 0 -1.11022e-16 -1.11022e-16" mesh="lamp_head" material="lamp_head_material"/>
-                <geom type="mesh" class="collision" pos="2.60209e-18 0 -0.08014" quat="1 0 -1.11022e-16 -1.11022e-16" mesh="lamp_head" material="lamp_head_material"/>
-              </body>
-            </body>
-          </body>
-        </body>
+    <!-- Link lamparm__base_elbow -->
+    <body name="lamparm__base_elbow" pos="0 0 0" quat="1 0 0 0" childclass="simulation">
+      <freejoint name="lamparm__base_elbow_freejoint"/>
+      <inertial pos="-0.0229181 0.00297443 0.185358" mass="0.134549" fullinertia="0.000472889 0.000498762 8.10272e-05 1.27811e-05 0.000145734 -5.93489e-05"/>
+      <!-- Part lamparm__base_elbow -->
+      <geom type="mesh" class="visual" pos="-0.0201675 0.024048 0.201642" quat="0.186925 -0.176272 0.0341156 0.965828" mesh="lamparm__base_elbow" material="lamparm__base_elbow_material"/>
+      <geom type="mesh" class="collision" pos="-0.0201675 0.024048 0.201642" quat="0.186925 -0.176272 0.0341156 0.965828" mesh="lamparm__base_elbow" material="lamparm__base_elbow_material"/>
+      <!-- Link scs215_v5 -->
+      <body name="scs215_v5" pos="0.0154636 0.00756357 0.08031" quat="0.585897 -0.395884 0.585897 0.395884">
+        <!-- Joint from lamparm__base_elbow to scs215_v5 -->
+        <joint axis="0 0 1" name="2" type="hinge" range="-1.931840663764446 1.209751989825347" class="sts3215"/>
+        <inertial pos="0.0180556 0.000605864 -0.0197123" mass="0.0852562" fullinertia="8.7923e-06 1.82503e-05 1.4956e-05 -3.86833e-07 9.72694e-07 6.73016e-08"/>
+        <!-- Part 金属舵盘_驱动__v2 -->
+        <geom type="mesh" class="visual" pos="-0.01 0 -0.027" quat="0.707107 0.707107 -0 1.04589e-31" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <geom type="mesh" class="collision" pos="-0.01 0 -0.027" quat="0.707107 0.707107 -0 1.04589e-31" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <!-- Part 金属舵盘_从动__v2 -->
+        <geom type="mesh" class="visual" pos="0.01 -4.63171e-16 -0.05905" quat="2.57658e-15 2.4844e-15 0.707107 -0.707107" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <geom type="mesh" class="collision" pos="0.01 -4.63171e-16 -0.05905" quat="2.57658e-15 2.4844e-15 0.707107 -0.707107" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <!-- Part pcb_chazuo_92 -->
+        <geom type="mesh" class="visual" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <geom type="mesh" class="collision" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <!-- Part xg_ziji_16 -->
+        <geom type="mesh" class="visual" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <geom type="mesh" class="collision" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <!-- Part ge_27 -->
+        <geom type="mesh" class="visual" pos="-1.249e-16 6.93889e-17 -0.0156" quat="0 1 0 0" mesh="ge_27" material="ge_27_material"/>
+        <geom type="mesh" class="collision" pos="-1.249e-16 6.93889e-17 -0.0156" quat="0 1 0 0" mesh="ge_27" material="ge_27_material"/>
+        <!-- Part sg_ziji_15 -->
+        <geom type="mesh" class="visual" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <geom type="mesh" class="collision" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <!-- Part zk_122 -->
+        <geom type="mesh" class="visual" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="zk_122" material="zk_122_material"/>
+        <geom type="mesh" class="collision" pos="0.0255 6.59195e-17 -0.0096" quat="0.707107 0.707107 -0 1.04589e-31" mesh="zk_122" material="zk_122_material"/>
+        <!-- Part motor_1723_3 -->
+        <geom type="mesh" class="visual" pos="0.0255 0.00125 -0.03245" quat="0.5 0.5 0.5 0.5" mesh="motor_1723_3" material="motor_1723_3_material"/>
+        <geom type="mesh" class="collision" pos="0.0255 0.00125 -0.03245" quat="0.5 0.5 0.5 0.5" mesh="motor_1723_3" material="motor_1723_3_material"/>
       </body>
+    </body>
+    <!-- Link lamparm__wrist_head -->
+    <body name="lamparm__wrist_head" pos="0 0 0" quat="1 0 0 0" childclass="simulation">
+      <freejoint name="lamparm__wrist_head_freejoint"/>
+      <inertial pos="0.00827959 -0.0103008 0.0499315" mass="0.0101242" fullinertia="2.18249e-06 1.57724e-06 2.87377e-06 -2.90349e-07 -5.3858e-09 -1.33928e-08"/>
+      <!-- Part lamparm__wrist_head -->
+      <geom type="mesh" class="visual" pos="0.0083 -0.01025 0.0392" quat="0.190013 5.21098e-16 2.06035e-17 0.981782" mesh="lamparm__wrist_head" material="lamparm__wrist_head_material"/>
+      <geom type="mesh" class="collision" pos="0.0083 -0.01025 0.0392" quat="0.190013 5.21098e-16 2.06035e-17 0.981782" mesh="lamparm__wrist_head" material="lamparm__wrist_head_material"/>
+      <!-- Link scs215_v5_2 -->
+      <body name="scs215_v5_2" pos="0.0083 -0.01025 0.0392" quat="0.190013 5.21098e-16 2.06035e-17 0.981782">
+        <!-- Joint from lamparm__wrist_head to scs215_v5_2 -->
+        <joint axis="0 0 1" name="1" type="hinge" range="-5.09473967719376 1.188445629985826" class="sts3215"/>
+        <inertial pos="0.0165258 0.00729871 -0.0197123" mass="0.0852562" fullinertia="1.03767e-05 1.66659e-05 1.4956e-05 -3.55311e-06 8.77345e-07 4.25356e-07"/>
+        <!-- Part 金属舵盘_驱动__v2_2 -->
+        <geom type="mesh" class="visual" pos="-0.0092779 -0.00373102 -0.027" quat="0.694224 0.694224 0.134359 0.134359" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <geom type="mesh" class="collision" pos="-0.0092779 -0.00373102 -0.027" quat="0.694224 0.694224 0.134359 0.134359" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <!-- Part 金属舵盘_从动__v2_2 -->
+        <geom type="mesh" class="visual" pos="0.0092779 0.00373102 -0.05905" quat="0.134359 -0.134359 0.694224 -0.694224" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <geom type="mesh" class="collision" pos="0.0092779 0.00373102 -0.05905" quat="0.134359 -0.134359 0.694224 -0.694224" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <!-- Part pcb_chazuo_92_2 -->
+        <geom type="mesh" class="visual" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <geom type="mesh" class="collision" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <!-- Part xg_ziji_16_2 -->
+        <geom type="mesh" class="visual" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <geom type="mesh" class="collision" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <!-- Part ge_27_2 -->
+        <geom type="mesh" class="visual" pos="-6.93889e-17 2.1684e-17 -0.0156" quat="6.87769e-16 -0.981782 -0.190013 1.05019e-15" mesh="ge_27" material="ge_27_material"/>
+        <geom type="mesh" class="collision" pos="-6.93889e-17 2.1684e-17 -0.0156" quat="6.87769e-16 -0.981782 -0.190013 1.05019e-15" mesh="ge_27" material="ge_27_material"/>
+        <!-- Part sg_ziji_15_2 -->
+        <geom type="mesh" class="visual" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <geom type="mesh" class="collision" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <!-- Part zk_122_2 -->
+        <geom type="mesh" class="visual" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="zk_122" material="zk_122_material"/>
+        <geom type="mesh" class="collision" pos="0.0236586 0.00951411 -0.0096" quat="0.694224 0.694224 0.134359 0.134359" mesh="zk_122" material="zk_122_material"/>
+        <!-- Part motor_1723_3_2 -->
+        <geom type="mesh" class="visual" pos="0.0231923 0.0106739 -0.03245" quat="0.395884 0.395884 0.585897 0.585897" mesh="motor_1723_3" material="motor_1723_3_material"/>
+        <geom type="mesh" class="collision" pos="0.0231923 0.0106739 -0.03245" quat="0.395884 0.395884 0.585897 0.585897" mesh="motor_1723_3" material="motor_1723_3_material"/>
+        <!-- Frame imu_site -->
+        <site group="3" name="imu_site" pos="-4.51028e-17 -1.82146e-17 -0.0378" quat="5.4239e-16 0.190013 -0.981782 -1.7387e-15"/>
+      </body>
+    </body>
+    <!-- Link lamparm__elbow_wrist -->
+    <body name="lamparm__elbow_wrist" pos="0 0 0" quat="1 0 0 0" childclass="simulation">
+      <freejoint name="lamparm__elbow_wrist_freejoint"/>
+      <inertial pos="-0.144104 0.0515418 0.248908" mass="0.107291" fullinertia="0.000121928 0.000236114 0.000188338 4.83306e-05 -0.000107412 4.00557e-05"/>
+      <!-- Part lamparm__elbow_wrist -->
+      <geom type="mesh" class="visual" pos="-0.149427 0.0321877 0.247913" quat="0.451772 -0.168701 -0.871663 -0.0874355" mesh="lamparm__elbow_wrist" material="lamparm__elbow_wrist_material"/>
+      <geom type="mesh" class="collision" pos="-0.149427 0.0321877 0.247913" quat="0.451772 -0.168701 -0.871663 -0.0874355" mesh="lamparm__elbow_wrist" material="lamparm__elbow_wrist_material"/>
+      <!-- Link scs215_v5_3 -->
+      <body name="scs215_v5_3" pos="-0.0718619 0.0433005 0.303327" quat="0.200162 -0.438741 -0.554533 -0.678185">
+        <!-- Joint from lamparm__elbow_wrist to scs215_v5_3 -->
+        <joint axis="0 0 1" name="3" type="hinge" range="-2.609605990859412 0.5319866627303811" class="sts3215"/>
+        <inertial pos="-0.0158677 0.00863651 -0.0197123" mass="0.0852562" fullinertia="1.08876e-05 1.61549e-05 1.4956e-05 3.94674e-06 -8.72407e-07 4.35395e-07"/>
+        <!-- Part 金属舵盘_驱动__v2_3 -->
+        <geom type="mesh" class="visual" pos="0.00861801 -0.00507246 -0.027" quat="0.185876 0.185876 0.682239 0.682239" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <geom type="mesh" class="collision" pos="0.00861801 -0.00507246 -0.027" quat="0.185876 0.185876 0.682239 0.682239" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <!-- Part 金属舵盘_从动__v2_3 -->
+        <geom type="mesh" class="visual" pos="-0.00861801 0.00507246 -0.05905" quat="0.682239 -0.682239 0.185876 -0.185876" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <geom type="mesh" class="collision" pos="-0.00861801 0.00507246 -0.05905" quat="0.682239 -0.682239 0.185876 -0.185876" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <!-- Part pcb_chazuo_92_3 -->
+        <geom type="mesh" class="visual" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <geom type="mesh" class="collision" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <!-- Part xg_ziji_16_3 -->
+        <geom type="mesh" class="visual" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <geom type="mesh" class="collision" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <!-- Part ge_27_3 -->
+        <geom type="mesh" class="visual" pos="-2.77556e-15 6.4948e-15 -0.0156" quat="1.44711e-14 0.262868 0.964832 -1.85113e-14" mesh="ge_27" material="ge_27_material"/>
+        <geom type="mesh" class="collision" pos="-2.77556e-15 6.4948e-15 -0.0156" quat="1.44711e-14 0.262868 0.964832 -1.85113e-14" mesh="ge_27" material="ge_27_material"/>
+        <!-- Part sg_ziji_15_3 -->
+        <geom type="mesh" class="visual" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <geom type="mesh" class="collision" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <!-- Part zk_122_3 -->
+        <geom type="mesh" class="visual" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="zk_122" material="zk_122_material"/>
+        <geom type="mesh" class="collision" pos="-0.0219759 0.0129348 -0.0096" quat="0.185876 0.185876 0.682239 0.682239" mesh="zk_122" material="zk_122_material"/>
+        <!-- Part motor_1723_3_3 -->
+        <geom type="mesh" class="visual" pos="-0.02261 0.0118575 -0.03245" quat="0.350982 0.350982 -0.61385 -0.61385" mesh="motor_1723_3" material="motor_1723_3_material"/>
+        <geom type="mesh" class="collision" pos="-0.02261 0.0118575 -0.03245" quat="0.350982 0.350982 -0.61385 -0.61385" mesh="motor_1723_3" material="motor_1723_3_material"/>
+      </body>
+    </body>
+    <!-- Link lamparm__wrist_head_2 -->
+    <body name="lamparm__wrist_head_2" pos="0 0 0" quat="1 0 0 0" childclass="simulation">
+      <freejoint name="lamparm__wrist_head_2_freejoint"/>
+      <inertial pos="-0.222648 0.0973951 0.190378" mass="0.0101242" fullinertia="2.50556e-06 1.63778e-06 2.49016e-06 -4.30575e-07 2.47192e-07 -1.10648e-07"/>
+      <!-- Part lamparm__wrist_head_2 -->
+      <geom type="mesh" class="visual" pos="-0.214533 0.0940727 0.196565" quat="0.451637 -0.16736 -0.871922 -0.0881301" mesh="lamparm__wrist_head" material="lamparm__wrist_head_material"/>
+      <geom type="mesh" class="collision" pos="-0.214533 0.0940727 0.196565" quat="0.451637 -0.16736 -0.871922 -0.0881301" mesh="lamparm__wrist_head" material="lamparm__wrist_head_material"/>
+      <!-- Link scs215_v5_4 -->
+      <body name="scs215_v5_4" pos="-0.214533 0.0940727 0.196565" quat="0.451637 -0.16736 -0.871922 -0.0881301">
+        <!-- Joint from lamparm__wrist_head_2 to scs215_v5_4 -->
+        <joint axis="0 0 1" name="4" type="hinge" range="-3.14466826187895 3.1385170453006364" class="sts3215"/>
+        <inertial pos="0.000661393 -0.0180537 -0.0197123" mass="0.0852562" fullinertia="1.82478e-05 8.79477e-06 1.4956e-05 4.15915e-07 7.02929e-08 -9.72482e-07"/>
+        <!-- Part 金属舵盘_驱动__v2_4 -->
+        <geom type="mesh" class="visual" pos="-3.0756e-05 0.00999995 -0.027" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <geom type="mesh" class="collision" pos="-3.0756e-05 0.00999995 -0.027" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+        <!-- Part 金属舵盘_从动__v2_4 -->
+        <geom type="mesh" class="visual" pos="3.0756e-05 -0.00999995 -0.05905" quat="0.499231 -0.499231 -0.500768 0.500768" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <geom type="mesh" class="collision" pos="3.0756e-05 -0.00999995 -0.05905" quat="0.499231 -0.499231 -0.500768 0.500768" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+        <!-- Part pcb_chazuo_92_4 -->
+        <geom type="mesh" class="visual" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <geom type="mesh" class="collision" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+        <!-- Part xg_ziji_16_4 -->
+        <geom type="mesh" class="visual" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <geom type="mesh" class="collision" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+        <!-- Part ge_27_4 -->
+        <geom type="mesh" class="visual" pos="1.66533e-16 3.05311e-16 -0.0156" quat="1.48824e-14 0.708193 -0.706019 -1.86072e-14" mesh="ge_27" material="ge_27_material"/>
+        <geom type="mesh" class="collision" pos="1.66533e-16 3.05311e-16 -0.0156" quat="1.48824e-14 0.708193 -0.706019 -1.86072e-14" mesh="ge_27" material="ge_27_material"/>
+        <!-- Part sg_ziji_15_4 -->
+        <geom type="mesh" class="visual" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <geom type="mesh" class="collision" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+        <!-- Part zk_122_4 -->
+        <geom type="mesh" class="visual" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="zk_122" material="zk_122_material"/>
+        <geom type="mesh" class="collision" pos="7.84279e-05 -0.0254999 -0.0096" quat="0.500768 0.500768 -0.499231 -0.499231" mesh="zk_122" material="zk_122_material"/>
+        <!-- Part motor_1723_3_4 -->
+        <geom type="mesh" class="visual" pos="0.00132842 -0.025496 -0.03245" quat="0.707106 0.707106 0.00108739 0.00108739" mesh="motor_1723_3" material="motor_1723_3_material"/>
+        <geom type="mesh" class="collision" pos="0.00132842 -0.025496 -0.03245" quat="0.707106 0.707106 0.00108739 0.00108739" mesh="motor_1723_3" material="motor_1723_3_material"/>
+      </body>
+    </body>
+    <!-- Link scs215_v5_5 -->
+    <body name="scs215_v5_5" pos="0 0 0" quat="1 0 0 0" childclass="simulation">
+      <freejoint name="scs215_v5_5_freejoint"/>
+      <inertial pos="-0.232145 0.101705 0.18377" mass="0.0852562" fullinertia="1.21537e-05 1.51057e-05 1.47392e-05 3.77963e-07 -4.48721e-06 1.13263e-06"/>
+      <!-- Part 金属舵盘_驱动__v2_5 -->
+      <geom type="mesh" class="visual" pos="-0.250382 0.116896 0.167119" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+      <geom type="mesh" class="collision" pos="-0.250382 0.116896 0.167119" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="金属舵盘_驱动__v2" material="金属舵盘_驱动__v2_material"/>
+      <!-- Part 金属舵盘_从动__v2_5 -->
+      <geom type="mesh" class="visual" pos="-0.223315 0.140555 0.17873" quat="0.297186 0.180659 0.935897 -0.0560241" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+      <geom type="mesh" class="collision" pos="-0.223315 0.140555 0.17873" quat="0.297186 0.180659 0.935897 -0.0560241" mesh="金属舵盘_从动__v2" material="金属舵盘_从动__v2_material"/>
+      <!-- Part pcb_chazuo_92_5 -->
+      <geom type="mesh" class="visual" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+      <geom type="mesh" class="collision" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="pcb_chazuo_92" material="pcb_chazuo_92_material"/>
+      <!-- Part xg_ziji_16_5 -->
+      <geom type="mesh" class="visual" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+      <geom type="mesh" class="collision" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="xg_ziji_16" material="xg_ziji_16_material"/>
+      <!-- Part ge_27_5 -->
+      <geom type="mesh" class="visual" pos="-0.247035 0.103263 0.172855" quat="0.622164 -0.701394 -0.0823972 -0.337887" mesh="ge_27" material="ge_27_material"/>
+      <geom type="mesh" class="collision" pos="-0.247035 0.103263 0.172855" quat="0.622164 -0.701394 -0.0823972 -0.337887" mesh="ge_27" material="ge_27_material"/>
+      <!-- Part sg_ziji_15_5 -->
+      <geom type="mesh" class="visual" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+      <geom type="mesh" class="collision" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="sg_ziji_15" material="sg_ziji_15_material"/>
+      <!-- Part zk_122_5 -->
+      <geom type="mesh" class="visual" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="zk_122" material="zk_122_material"/>
+      <geom type="mesh" class="collision" pos="-0.229933 0.0899185 0.187541" quat="0.0560241 0.935897 -0.180659 0.297186" mesh="zk_122" material="zk_122_material"/>
+      <!-- Part motor_1723_3_5 -->
+      <geom type="mesh" class="visual" pos="-0.222115 0.111399 0.18862" quat="0.16736 0.451637 -0.0881301 0.871922" mesh="motor_1723_3" material="motor_1723_3_material"/>
+      <geom type="mesh" class="collision" pos="-0.222115 0.111399 0.18862" quat="0.16736 0.451637 -0.0881301 0.871922" mesh="motor_1723_3" material="motor_1723_3_material"/>
+      <!-- Link lamphead -->
+      <body name="lamphead" pos="-0.25283 0.0887792 0.172816" quat="0.622164 -0.701394 -0.0823972 -0.337887">
+        <!-- Joint from scs215_v5_5 to lamphead -->
+        <joint axis="0 0 1" name="5" type="hinge" range="-2.1841514133949023 0.9574412401948911" class="sts3215"/>
+        <inertial pos="-0.0646673 -0.0451799 0.0186249" mass="0.0833107" fullinertia="0.000138437 0.000147289 0.000170035 -1.20464e-05 -4.1948e-10 1.29183e-10"/>
+        <!-- Part lamphead -->
+        <geom type="mesh" class="visual" pos="-0.0020443 -0.00143904 0.03925" quat="0.325724 0.325724 0.627617 0.627617" mesh="lamphead" material="lamphead_material"/>
+        <geom type="mesh" class="collision" pos="-0.0020443 -0.00143904 0.03925" quat="0.325724 0.325724 0.627617 0.627617" mesh="lamphead" material="lamphead_material"/>
+        <!-- Frame camera -->
+        <site group="3" name="camera" pos="-0.10999 -0.0319989 0.018625" quat="0.627617 0.627617 -0.325724 -0.325724"/>
+      </body>
+    </body>
+    <!-- Link lamp_base -->
+    <body name="lamp_base" pos="0 0 0" quat="1 0 0 0" childclass="simulation">
+      <freejoint name="lamp_base_freejoint"/>
+      <inertial pos="-0.00977932 -0.0138894 0.0149535" mass="0.363855" fullinertia="0.000661257 0.000822089 0.00144905 4.24141e-05 -8.60647e-06 -9.71008e-08"/>
+      <!-- Part lamp_base -->
+      <geom type="mesh" class="visual" pos="-0.0042 -0.01025 0" quat="0.707107 0 -9.53114e-17 -0.707107" mesh="lamp_base" material="lamp_base_material"/>
+      <geom type="mesh" class="collision" pos="-0.0042 -0.01025 0" quat="0.707107 0 -9.53114e-17 -0.707107" mesh="lamp_base" material="lamp_base_material"/>
     </body>
   </worldbody>
   <asset>
-    <mesh file="b3b_eh.stl"/>
-    <mesh file="dc15_a01_horn_idle2_dummy.stl"/>
-    <mesh file="square_joint.stl"/>
-    <mesh file="arm_length_10cm.stl"/>
-    <mesh file="dc15_a01_case_m_dummy.stl"/>
-    <mesh file="arm_length_15cm.stl"/>
-    <mesh file="bts2_m2_6x8.stl"/>
-    <mesh file="lamp_head.stl"/>
-    <mesh file="dc15_a01_horn_dummy.stl"/>
-    <mesh file="base.stl"/>
-    <mesh file="angle_joint.stl"/>
-    <mesh file="dc15_a01_case_b_dummy.stl"/>
-    <mesh file="dc15_a01_idle_cap_dummy.stl"/>
-    <mesh file="dc15_a01_case_f_dummy.stl"/>
-    <mesh file="dc15_a01_led_cap2_dummy.stl"/>
-    <material name="base_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="dc15_a01_led_cap2_dummy_material" rgba="0.768627 0.886275 0.952941 1"/>
-    <material name="bts2_m2_6x8_material" rgba="0.980392 0.713725 0.00392157 1"/>
-    <material name="b3b_eh_material" rgba="0.972549 0.529412 0.00392157 1"/>
-    <material name="dc15_a01_case_m_dummy_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="dc15_a01_horn_dummy_material" rgba="0.972549 0.529412 0.00392157 1"/>
-    <material name="dc15_a01_case_f_dummy_material" rgba="0.980392 0.713725 0.00392157 1"/>
-    <material name="dc15_a01_case_b_dummy_material" rgba="0.498039 0.498039 0.498039 1"/>
-    <material name="dc15_a01_horn_idle2_dummy_material" rgba="0.647059 0.647059 0.647059 1"/>
-    <material name="dc15_a01_idle_cap_dummy_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="square_joint_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="arm_length_15cm_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="arm_length_10cm_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="angle_joint_material" rgba="0.615686 0.811765 0.929412 1"/>
-    <material name="lamp_head_material" rgba="0.615686 0.811765 0.929412 1"/>
+    <mesh file="lamparm__base_elbow.stl"/>
+    <mesh file="zk_122.stl"/>
+    <mesh file="ge_27.stl"/>
+    <mesh file="pcb_chazuo_92.stl"/>
+    <mesh file="金属舵盘_从动__v2.stl"/>
+    <mesh file="金属舵盘_驱动__v2.stl"/>
+    <mesh file="lamparm__wrist_head.stl"/>
+    <mesh file="lamphead.stl"/>
+    <mesh file="motor_1723_3.stl"/>
+    <mesh file="sg_ziji_15.stl"/>
+    <mesh file="lamp_base.stl"/>
+    <mesh file="xg_ziji_16.stl"/>
+    <mesh file="lamparm__elbow_wrist.stl"/>
+    <material name="lamparm__base_elbow_material" rgba="0.301961 0.301961 0.301961 1"/>
+    <material name="金属舵盘_驱动__v2_material" rgba="0.960784 0.960784 0.964706 1"/>
+    <material name="金属舵盘_从动__v2_material" rgba="0.960784 0.960784 0.964706 1"/>
+    <material name="pcb_chazuo_92_material" rgba="0.0980392 0.0980392 0.0980392 1"/>
+    <material name="xg_ziji_16_material" rgba="0.0980392 0.0980392 0.0980392 1"/>
+    <material name="ge_27_material" rgba="0.0980392 0.0980392 0.0980392 1"/>
+    <material name="sg_ziji_15_material" rgba="0.0980392 0.0980392 0.0980392 1"/>
+    <material name="zk_122_material" rgba="0.0980392 0.0980392 0.0980392 1"/>
+    <material name="motor_1723_3_material" rgba="0.0980392 0.0980392 0.0980392 1"/>
+    <material name="lamparm__wrist_head_material" rgba="0.301961 0.301961 0.301961 1"/>
+    <material name="lamparm__elbow_wrist_material" rgba="0.301961 0.301961 0.301961 1"/>
+    <material name="lamphead_material" rgba="0.301961 0.301961 0.301961 1"/>
+    <material name="lamp_base_material" rgba="0.301961 0.301961 0.301961 1"/>
   </asset>
   <actuator>
-    <position class="sts3215" name="1" joint="1" inheritrange="1"/>
     <position class="sts3215" name="2" joint="2" inheritrange="1"/>
+    <position class="sts3215" name="1" joint="1" inheritrange="1"/>
     <position class="sts3215" name="3" joint="3" inheritrange="1"/>
     <position class="sts3215" name="4" joint="4" inheritrange="1"/>
     <position class="sts3215" name="5" joint="5" inheritrange="1"/>
