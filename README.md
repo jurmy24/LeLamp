@@ -47,7 +47,7 @@ LeLamp is an expressive robot lamp featuring:
 ### Getting Help
 
 - **Start here**: [Troubleshooting Guide](./docs/6.%20Troubleshooting.md) for common issues
-- **Discord**: [Join our community](https://discord.gg/4hmNW3Ep) for real-time help and discussions
+- **Discord**: [Join our community](https://discord.gg/727JXBt8Zt) for real-time help and discussions
 - **GitHub Issues**: [Report bugs or ask questions](https://github.com/humancomputerlab/le_lamp/issues)
 
 ### Contributing
